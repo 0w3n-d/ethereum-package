@@ -97,7 +97,7 @@ def launch_helix_relay(
         node_selectors=node_selectors,
     )
 
-    image = mev_params.helix_relay_image
+    image = mev_params.mev_relay_image
 
     # Convert beacon_uris from a comma-separated string to a list of URIs
     beacon_uris = [uri.strip() for uri in beacon_uris.split(",")]
