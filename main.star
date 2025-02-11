@@ -52,7 +52,7 @@ flashbots_mev_relay = import_module(
     "./src/mev/flashbots/mev_relay/mev_relay_launcher.star"
 )
 helix_mev_relay = import_module(
-    "./src/mev/flashbots/mev_relay/launch_helix_relay.star"
+    "./src/mev/flashbots/mev_relay/helix_launcher.star"
 )
 mock_mev = import_module("./src/mev/flashbots/mock_mev/mock_mev_launcher.star")
 mev_flood = import_module("./src/mev/flashbots/mev_flood/mev_flood_launcher.star")
