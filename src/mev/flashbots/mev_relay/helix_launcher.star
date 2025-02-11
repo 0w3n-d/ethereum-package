@@ -203,9 +203,9 @@ def new_config_template_data(
         "redis": {
             "url": redis_url,
         },
-        "simulator": {
-            "url": blocksim_url,
-        },
+        "simulators": [
+            {"url": blocksim_url}
+        ],
         "beacon_clients": [
             {"url": uri} for uri in beacon_uris
         ],
