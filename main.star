@@ -314,6 +314,7 @@ def run(plan, args={}):
                 blocksim_uri,
                 network_params.seconds_per_slot,
                 persistent,
+                final_genesis_timestamp,
                 global_node_selectors,
             )
         elif args_with_right_defaults.mev_type == constants.MEV_RS_MEV_TYPE:
