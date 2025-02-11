@@ -78,7 +78,7 @@ def run(plan, args={}):
     """Launches an arbitrarily complex ethereum testnet based on the arguments provided
 
     Args:
-        args: A YAML or JSON argument to configure the network; example https://github.com/ethpandaops/ethereum-package/blob/main/network_params.yaml
+        args: A YAML or JSON argument to configure the network; example https://github.com/0w3n-d/ethereum-package/blob/main/network_params.yaml
     """
 
     args_with_right_defaults = input_parser.input_parser(plan, args)
