@@ -97,6 +97,16 @@ MEV_RS_MEV_BUILDER_CONFIG_FILEPATH = (
     STATIC_FILES_DIRPATH + "/mev/mev-rs/mev_builder/config.toml.tmpl"
 )
 
+# helix config
+HELIX_CONFIG_DIRPATH = "/mev/helix-relay-config"
+HELIX_CONFIG_FULL_DIRPATH = (
+    STATIC_FILES_DIRPATH + HELIX_CONFIG_DIRPATH
+)
+HELIX_CONFIG_TEMPLATE_FILEPATH = (
+    STATIC_FILES_DIRPATH + HELIX_CONFIG_DIRPATH + "/config.yaml.tmpl"
+)
+HELIX_NETWORK_CONFIG_TEMPLATE_FILEPATH=HELIX_CONFIG_FULL_DIRPATH + "/network-config.yaml.tmpl"
+
 FLASHBOTS_RBUILDER_CONFIG_FILEPATH = (
     STATIC_FILES_DIRPATH + "/mev/flashbots/mev_builder/config.toml.tmpl"
 )

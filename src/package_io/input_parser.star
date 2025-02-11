@@ -1064,7 +1064,7 @@ def get_default_docker_cache_params():
 
 
 def get_default_mev_params(mev_type, preset):
-    mev_relay_image = constants.DEFAULT_FLASHBOTS_RELAY_IMAGE
+    mev_relay_image = constants.DEFAULT_HELIX_RELAY_IMAGE
     mev_builder_image = constants.DEFAULT_FLASHBOTS_BUILDER_IMAGE
     if preset == "minimal":
         mev_builder_cl_image = DEFAULT_CL_IMAGES_MINIMAL[constants.CL_TYPE.lighthouse]

@@ -51,6 +51,9 @@ flashbots_mev_boost = import_module(
 flashbots_mev_relay = import_module(
     "./src/mev/flashbots/mev_relay/mev_relay_launcher.star"
 )
+helix_mev_relay = import_module(
+    "./src/mev/flashbots/mev_relay/launch_helix_relay.star"
+)
 mock_mev = import_module("./src/mev/flashbots/mock_mev/mock_mev_launcher.star")
 mev_flood = import_module("./src/mev/flashbots/mev_flood/mev_flood_launcher.star")
 mev_custom_flood = import_module(
@@ -302,7 +305,7 @@ def run(plan, args={}):
             args_with_right_defaults.mev_type == constants.FLASHBOTS_MEV_TYPE
             or args_with_right_defaults.mev_type == constants.COMMIT_BOOST_MEV_TYPE
         ):
-            endpoint = flashbots_mev_relay.launch_mev_relay(
+            endpoint = helix_mev_relay.launch_helix_relay(
                 plan,
                 mev_params,
                 network_id,
