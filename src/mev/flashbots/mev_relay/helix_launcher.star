@@ -120,7 +120,6 @@ def launch_helix_relay(
         network_config_dir_path_on_service,
         validator_root,
         genesis_timestamp,
-        mev_params.helix_relay_config_extension,
     )
 
     helix_config_template_and_data = shared_utils.new_template_and_data(
@@ -192,7 +191,6 @@ def new_config_template_data(
     network_config_dir_path,
     genesis_validator_root,
     genesis_time,
-    config_extension,
 ):
     config_hashmap = {
         "postgres": {
@@ -217,9 +215,5 @@ def new_config_template_data(
             "genesis_time": genesis_time,
         },
     }
-
-    if config_extension != None:
-        for key, value in config_extension.items():
-            config_hashmap[key] = value
 
     return config_hashmap
