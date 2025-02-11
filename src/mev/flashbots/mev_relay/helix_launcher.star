@@ -51,7 +51,7 @@ def launch_helix_relay(
     blocksim_uri,
     seconds_per_slot,
     persistent,
-    genesis_time,
+    genesis_timestamp,
     global_node_selectors,
 ):
 
