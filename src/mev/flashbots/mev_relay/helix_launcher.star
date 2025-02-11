@@ -45,7 +45,7 @@ REDIS_MAX_MEMORY = 1024
 def launch_helix_relay(
     plan,
     mev_params,
-    network_id,
+    network_params,
     beacon_uris,
     validator_root,
     blocksim_uri,
@@ -54,6 +54,8 @@ def launch_helix_relay(
     genesis_timestamp,
     global_node_selectors,
 ):
+
+    plan.print(network_params)
 
     node_selectors = global_node_selectors
 
@@ -94,8 +96,6 @@ def launch_helix_relay(
         max_memory=POSTGRES_MAX_MEMORY,
         node_selectors=node_selectors,
     )
-
-    network_name = NETWORK_ID_TO_NAME.get(network_id, network_id)
 
     image = mev_params.helix_relay_image
 

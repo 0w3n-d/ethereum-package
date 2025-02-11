@@ -308,7 +308,7 @@ def run(plan, args={}):
             endpoint = helix_mev_relay.launch_helix_relay(
                 plan,
                 mev_params,
-                network_id,
+                network_params,
                 beacon_uris,
                 genesis_validators_root,
                 blocksim_uri,
