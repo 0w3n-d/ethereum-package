@@ -3,6 +3,7 @@ input_parser = import_module("../../../package_io/input_parser.star")
 static_files = import_module("../../../static_files/static_files.star")
 constants = import_module("../../../package_io/constants.star")
 flashbots_relay = import_module("../mev_relay/mev_relay_launcher.star")
+helix_relay = import_module("../../../mev/flashbots/mev_relay/helix_launcher.star")
 lighthouse = import_module("../../../cl/lighthouse/lighthouse_launcher.star")
 # MEV Builder flags
 
@@ -82,7 +83,7 @@ def new_builder_config_template_data(
         ),
         "GenesisForkVersion": constants.GENESIS_FORK_VERSION,
         "Relay": "mev-relay-api",
-        "RelayPort": flashbots_relay.MEV_RELAY_ENDPOINT_PORT,
+        "RelayPort": helix_relay.HELIX_RELAY_ENDPOINT_PORT,
         "PublicKey": pubkey,
         "SecretKey": secret,
         "Mnemonic": mnemonic,
