@@ -11,7 +11,9 @@ redis:
   url: {{ .redis.url }}
 
 simulators:
-  - url: {{ .simulator.url }}
+  {{ range $bcConfig := .simulators }}
+    - url: "{{ $bcConfig.url }}"
+  {{- end }}
 
 beacon_clients:
   {{ range $bcConfig := .beacon_clients }}
