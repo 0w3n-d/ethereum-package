@@ -10,8 +10,8 @@ postgres:
 redis:
   url: {{ .redis.url }}
 
-simulator:
-  url: {{ .simulator.url }}
+simulators:
+  - url: {{ .simulator.url }}
 
 beacon_clients:
   {{ range $bcConfig := .beacon_clients }}
