@@ -82,7 +82,7 @@ def new_builder_config_template_data(
             lighthouse.BEACON_HTTP_PORT_NUM,
         ),
         "GenesisForkVersion": constants.GENESIS_FORK_VERSION,
-        "Relay": "mev-relay-api",
+        "Relay": "helix-relay",
         "RelayPort": helix_relay.HELIX_RELAY_ENDPOINT_PORT,
         "PublicKey": pubkey,
         "SecretKey": secret,
